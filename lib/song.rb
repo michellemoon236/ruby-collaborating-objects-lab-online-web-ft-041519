@@ -35,15 +35,15 @@ class Song
     song
   end
   
-  def artist_name=(artist)
-    if (self.artist.nil?)
-      #binding.pry 
-      self.artist = Artist.new(artist)
-    else
-      self.artist.name = artist
-    end
+  # def artist_name=(artist)
+  #   if (self.artist.nil?)
+  #     #binding.pry 
+  #     self.artist = Artist.new(artist)
+  #   else
+  #     self.artist.name = artist
+  #   end
     # @artist = artist
     # @artist.add_song(self) unless @artist.songs.include?(self)
-  end
+  # end
   
 end
