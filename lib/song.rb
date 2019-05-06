@@ -8,22 +8,8 @@ class Song
   attr_accessor :name, :artist
   
   def initialize(name)
-    #accepts a name for the song (FAILED - 12)
     @name = name
   end
-  
-  # describe '#artist=' do
-  #   it 'sets the artist object to belong to the song' do
-  #     new_artist_object = Artist.new('King of Pop')
-  #     song.artist = new_artist_object
-  #     expect(song.artist).to eq(new_artist_object)
-  #   end
-  # end
-
-  # def artist=(artist)
-  #   #sets the artist object to belong to the song (FAILED - 14)
-  #   @artist = artist
-  # end
   
   def self.new_by_filename(filename)
     #creates a new instance of a song from the file that's passed (FAILED - 15)
@@ -34,18 +20,7 @@ class Song
     song.artist = Artist.find_or_create_by_name(artist_name)
     song.artist.add_song(song)
     song
-    #binding.pry
   end
   
-  # def artist_name=(artist)
-  #   if (self.artist.nil?)
-  #     #binding.pry 
-  #     self.artist = Artist.new(artist)
-  #   else
-  #     self.artist.name = artist
-  #   end
-    # @artist = artist
-    # @artist.add_song(self) unless @artist.songs.include?(self)
-  # end
   
 end
