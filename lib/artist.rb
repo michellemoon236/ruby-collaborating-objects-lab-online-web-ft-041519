@@ -24,10 +24,6 @@ class Artist
   def add_song(song)
     song.artist = self
     @songs << song
-    #binding.pry
-    #from v--> 
-    # @songs << song unless @songs.include?(song)
-    # song.artist = self unless song.artist == self
   end
   
   def save
@@ -44,8 +40,6 @@ class Artist
     else
       @@all.find { |artist| artist.name == name }
     end
-    #from v--> 
-    #self.find(name) || self.create(name)
   end
   
   def print_songs
