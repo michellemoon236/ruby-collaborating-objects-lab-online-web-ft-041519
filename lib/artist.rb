@@ -48,20 +48,7 @@ class Artist
     #self.find(name) || self.create(name)
   end
   
-  
-  # describe '#print_songs' do
-  #   it 'lists all of the artist\'s songs' do
-  #     dirty_diana = Song.new("Dirty Diana")
-  #     billie_jean = Song.new("Billie Jean")
-  #     artist.add_song(dirty_diana)
-  #     artist.add_song(billie_jean)
-  #     expect{artist.print_songs}.to output("Dirty Diana\nBillie Jean\n").to_stdout
-  #   end
-  # end
-  
-  #binding.pry
   def print_songs
-    #binding.pry 
     @songs.each do |song|
       puts song.name
     end
@@ -70,28 +57,3 @@ class Artist
 end
 
 
-##
-
-# class Artist 
-#   attr_accessor :songs, :name
-#   @@all = []
-  
-#   def initialize(name)
-#     @name = name
-#     @songs = []
-#     @@all << self (#or in save)
-#   end
-  
-  
-  
-  # def self.find_or_create_by_name(name)
-  #   self.all.find { |artist| artist.name == name} ? self.all.find { |artist| artist.name == name} : Artist.new(name)
-    
-  #   ##ORR
-  #   if self.all.find { |artist| artist.name == name} 
-  #     self.all.find { |artist| artist.name == name} 
-  #   else 
-  #     Artist.new(name)
-  #   end
-  
-  
