@@ -40,13 +40,13 @@ class Song
   end
   
   def artist_name=(artist)
-    # if (self.artist.nil?)
-    #   self.artist = Artist.new(name)
-    # else
-    #   self.artist.name = name
-    # end
-    @artist = artist
-    @artist.add_song(self) unless @artist.songs.include?(self)
+    if (self.artist.nil?)
+      self.artist = Artist.new(name)
+    else
+      self.artist.name = name
+    end
+    # @artist = artist
+    # @artist.add_song(self) unless @artist.songs.include?(self)
   end
   
 end
