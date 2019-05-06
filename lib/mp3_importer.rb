@@ -20,7 +20,7 @@ class MP3Importer
     # @files = Dir.entries("./spec/fixtures/mp3s")
     # @files.delete_if { |i| i == "." || i ==".."}
     # binding.pry
-    @files ||= Dir.glob("#{@path}/*.mp3").map { |file| file.gsub("#{@path}/", "") }
+    Dir.glob("#{@path}/*.mp3").map { |file| file.gsub("#{@path}/", "") }
     #binding.pry
   end
   
@@ -29,7 +29,7 @@ class MP3Importer
   def import
   binding.pry
     #imports the files into the library by creating songs from a filename (FAILED - 11)
-      @files.each do |filename|
+      files.each do |filename|
       Song.new_by_filename(filename)
     end 
   end
