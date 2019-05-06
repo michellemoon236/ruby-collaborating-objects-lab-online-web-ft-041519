@@ -29,7 +29,7 @@ class MP3Importer
   def import
   binding.pry
     #imports the files into the library by creating songs from a filename (FAILED - 11)
-      files.each do |filename|
+      self.files.each do |filename|
       Song.new_by_filename(filename)
     end 
   end
