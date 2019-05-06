@@ -22,12 +22,12 @@ class Artist
   # end
   
   def add_song(song)
-    # song.artist = self
-    # @songs << song
+    song.artist = self
+    @songs << song
     #binding.pry
     #from v--> 
-    @songs << song unless @songs.include?(song)
-    song.artist = self unless song.artist == self
+    # @songs << song unless @songs.include?(song)
+    # song.artist = self unless song.artist == self
   end
   
   def save
