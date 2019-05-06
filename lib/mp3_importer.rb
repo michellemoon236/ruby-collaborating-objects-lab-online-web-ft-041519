@@ -21,7 +21,7 @@ class MP3Importer
     # @files.delete_if { |i| i == "." || i ==".."}
     # binding.pry
     @files = Dir.glob("#{@path}/*.mp3").map { |file| file.gsub("#{@path}/", "") }
-    binding.pry
+    #binding.pry
   end
   
   #binding.pry
