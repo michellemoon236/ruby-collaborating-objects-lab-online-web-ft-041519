@@ -25,7 +25,7 @@ class Artist
     # song.artist = self
     # @songs << song
     #binding.pry
-    #from video--> 
+    #from v--> 
     @songs << song unless @songs.include?(song)
     song.artist = self unless song.artist == self
   end
@@ -44,7 +44,7 @@ class Artist
     else
       @@all.find { |artist| artist.name == name }
     end
-    #from video--> 
+    #from v--> 
     #self.find(name) || self.create(name)
   end
   
