@@ -17,17 +17,14 @@ class MP3Importer
   def files
     #loads all the mp3 files in the path directory (FAILED - 9)
     #normalizes the filename to just the mp3 filename with no path (FAILED - 10)
+    @files = Dir.glob("#{@path}/*.mp3").map { |file| file.gsub("#{@path}/", "") }
+    
+    #OR
     # @files = Dir.entries("./spec/fixtures/mp3s")
     # @files.delete_if { |i| i == "." || i ==".."}
-    # binding.pry
-    @files = Dir.glob("#{@path}/*.mp3").map { |file| file.gsub("#{@path}/", "") }
-    #binding.pry
   end
   
-  #binding.pry
-  
   def import
-  #binding.pry
     #imports the files into the library by creating songs from a filename (FAILED - 11)
     self.files.each { |filename| Song.new_by_filename(filename) }
   end
