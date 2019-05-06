@@ -34,6 +34,7 @@ class Song
     song.artist = Artist.find_or_create_by_name(artist_name)
     song.artist.add_song(song)
     song
+    binding.pry
   end
   
   # def artist_name=(artist)
