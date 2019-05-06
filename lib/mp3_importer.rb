@@ -17,7 +17,7 @@ class MP3Importer
     #normalizes the filename to just the mp3 filename with no path (FAILED - 10)
     @files = Dir.entries("./spec/fixtures/mp3s")
     @files.delete_if { |i| i == "." || i ==".."}
-    #binding.pry
+    binding.pry
   end
   
   #binding.pry
