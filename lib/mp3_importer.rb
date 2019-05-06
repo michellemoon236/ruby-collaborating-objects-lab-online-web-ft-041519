@@ -3,6 +3,8 @@ require 'pry'
 
 class MP3Importer
   
+  attr_reader :files
+  
   def initialize(path)
     #accepts a file path to parse mp3 files from (FAILED - 8)
     @path = path
