@@ -28,15 +28,15 @@ class Song
   def self.new_by_filename(filename)
     #creates a new instance of a song from the file that's passed (FAILED - 15)
     #associates new song instance with the artist from the filename (FAILED - 16)
-    # name = filename.split(" - ")[1]
-    # artist = filename.split(" - ")[0]
-    # song = Song.new(name)
-    # song.artist_name=(artist)
-    # song
-    artist_name, song_name, genre_name = filename.chomp(".mp3").split(" - ")
-    song = self.new(song_name)
-    song.artist = Artist.find_or_create_by_name(artist_name)
+    name = filename.split(" - ")[1]
+    artist = filename.split(" - ")[0]
+    song = Song.new(name)
+    song.artist_name=(artist)
     song
+    # artist_name, song_name, genre_name = filename.chomp(".mp3").split(" - ")
+    # song = self.new(song_name)
+    # song.artist = Artist.find_or_create_by_name(artist_name)
+    # song
   end
   
   def artist_name=(artist)
