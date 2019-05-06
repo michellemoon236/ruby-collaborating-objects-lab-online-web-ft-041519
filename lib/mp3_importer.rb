@@ -3,7 +3,7 @@ require 'pry'
 
 class MP3Importer
   
-  attr_accessor :path, :files
+  attr_accessor :path
   
   def initialize(path)
     #accepts a file path to parse mp3 files from (FAILED - 8)
@@ -29,9 +29,7 @@ class MP3Importer
   def import
   binding.pry
     #imports the files into the library by creating songs from a filename (FAILED - 11)
-    @files.each do |filename|
-      Song.new_by_filename(filename)
-    end 
+    @files.each { |filename| Song.new_by_filename(filename) }
   end
   
 end
